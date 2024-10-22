@@ -4,8 +4,6 @@ package climate;
  * Contains the Data object, which
  * stores all the necessart items extracted
  * from every line read in the CSV file
- * 
- * @author Navya Sharma
  */
 
 public class Data {

@@ -2,17 +2,6 @@ package climate;
 
 import java.util.ArrayList;
 
-/**
- * Contains the CLI used by students to iterate through
- * ClimateEconJustice.java and work on the assignment
- * the program is executed by first compiling via:
- *      javac -d bin src/climate/*.java
- * and executing via:
- *      java -cp bin climate.Driver 
- *      
- * @author Navya Sharma
- */
-
 public class Driver {
 
     private static ClimateEconJustice climEconJust;

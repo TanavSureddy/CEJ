@@ -7,8 +7,6 @@ package climate;
  * a Data containing the information about this community.
  *
  * This Node makes the third layer in the 3-layered linked structure.
- * 
- * @author Navya Sharma
  */
 
 public class CommunityNode {
@@ -16,9 +14,6 @@ public class CommunityNode {
     public CommunityNode next; // link to the next community in the layer (community linked list)
     public Data info; // information about this community
 
-    /*
-     * Default constuctor: creates a node with null name, info, and references.
-     */
     public CommunityNode() {
         this.name = null;
         this.next = null;

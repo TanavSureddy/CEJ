@@ -5,32 +5,17 @@ import java.util.ArrayList;
 /**
  * This class contains methods which perform various operations on a layered 
  * linked list structure that contains USA communitie's Climate and Economic information.
- * 
- * @author Navya Sharma
  */
 
 public class ClimateEconJustice {
 
     private StateNode firstState;
-    
-    /*
-    * Constructor
-    * 
-    * **** DO NOT EDIT *****
-    */
+
     public ClimateEconJustice() {
         firstState = null;
     }
 
-    /*
-    * Get method to retrieve instance variable firstState
-    * 
-    * @return firstState
-    * 
-    * **** DO NOT EDIT *****
-    */ 
     public StateNode getFirstState () {
-        // DO NOT EDIT THIS CODE
         return firstState;
     }
 
@@ -41,11 +26,9 @@ public class ClimateEconJustice {
      * @param inputFile, the file read from the Driver to be used for
      * @return void
      * 
-     * **** DO NOT EDIT *****
      */
     public void createLinkedStructure ( String inputFile ) {
         
-        // DO NOT EDIT THIS CODE
         StdIn.setFile(inputFile);
         StdIn.readLine();
         
@@ -53,7 +36,6 @@ public class ClimateEconJustice {
         while ( StdIn.hasNextLine() ) {
             // Reads a single line from input file
             String line = StdIn.readLine();
-            // IMPLEMENT these methods
             addToStateLevel(line);
             addToCountyLevel(line);
             addToCommunityLevel(line);
@@ -68,7 +50,6 @@ public class ClimateEconJustice {
     */
     public void addToStateLevel ( String inputLine ) {
 
-        // WRITE YOUR CODE HERE
         String[] data = inputLine.split(",");
 
         String stateName = data[2];
@@ -95,18 +76,8 @@ public class ClimateEconJustice {
     }
 
    
-
-    /*
-    * Adds a county to a state's list of counties.
-    * 
-    * Access the state's list of counties' using the down pointer from the State class.
-    * Do nothing if the county is already present in the structure.
-    * 
-    * @param inputFile a line from the input file
-    */
     public void addToCountyLevel ( String inputLine ) {
 
-        // WRITE YOUR CODE HERE
         String[] data = inputLine.split(",");
         String stateName = data[2];
         String countyName = data[1];
@@ -165,7 +136,6 @@ public class ClimateEconJustice {
     */
     public void addToCommunityLevel ( String inputLine ) {
 
-        // WRITE YOUR CODE HERE
         String[] data = inputLine.split(",");
         String commName = data[0];
         String countyName = data[1];
@@ -184,8 +154,8 @@ public class ClimateEconJustice {
 
         StateNode statePointer = firstState;
         while(statePointer != null){
-            if (statePointer.getName().equals(stateName)){ //copy paste from addToStateLevel method
-                CountyNode countyPointer = statePointer.getDown(); // paste from addToCountyLevel
+            if (statePointer.getName().equals(stateName)){ 
+                CountyNode countyPointer = statePointer.getDown(); 
                 while (countyPointer != null){
                     if (countyPointer.getName().equals(countyName)){
                         CommunityNode commPointer = countyPointer.getDown();
@@ -227,7 +197,6 @@ public class ClimateEconJustice {
      */
     public int disadvantagedCommunities ( double userPrcntage, String race ) {
 
-        // WRITE YOUR CODE HERE
         int numComms = 0;
         userPrcntage = userPrcntage / 100; 
         
@@ -287,7 +256,7 @@ public class ClimateEconJustice {
             }
         }
 
-        return numComms; // replace this line
+        return numComms; 
     }
 
     /**
@@ -302,9 +271,6 @@ public class ClimateEconJustice {
      * @return the amount of communities that contain the same or higher percentage of the given race
      */
     public int nonDisadvantagedCommunities ( double userPrcntage, String race ) {
-
-        //WRITE YOUR CODE HERE
-        //literally same code as last but make it .equals("False")
         int numComms = 0;
         userPrcntage = userPrcntage / 100; 
         
@@ -364,7 +330,7 @@ public class ClimateEconJustice {
             }
         }
 
-        return numComms; // replace this line
+        return numComms; 
 
     }
     
@@ -376,8 +342,6 @@ public class ClimateEconJustice {
      * @return the States which have or exceed that level
      */ 
     public ArrayList<StateNode> statesPMLevels ( double PMlevel ) {
-
-        // WRITE YOUR METHOD HERE
         ArrayList<StateNode> pollutedStates = new ArrayList<>();
         StateNode firstNode = firstState;
         if(firstNode == null){
@@ -400,7 +364,7 @@ public class ClimateEconJustice {
             }
         }
 
-        return pollutedStates; // replace this line
+        return pollutedStates; 
     }
 
     /**
@@ -413,7 +377,6 @@ public class ClimateEconJustice {
      */
     public int chanceOfFlood ( double userPercntage ) {
 
-        // WRITE YOUR METHOD HERE
         int numComms = 0;
         StateNode firstNode = firstState;
         if(firstNode == null){
@@ -435,7 +398,7 @@ public class ClimateEconJustice {
             }
         }
 
-        return numComms; // replace this line
+        return numComms; 
     }
 
     /** 
@@ -447,7 +410,6 @@ public class ClimateEconJustice {
     */
     public ArrayList<CommunityNode> lowestIncomeCommunities ( String stateName ) {
 
-        //WRITE YOUR METHOD HERE
         ArrayList<CommunityNode> lowestIncomeComms = new ArrayList<>();
         StateNode statePointer = firstState;
 
@@ -488,7 +450,7 @@ public class ClimateEconJustice {
             
         }
     
-        return lowestIncomeComms; // replace this line
+        return lowestIncomeComms; 
     }
 }
     

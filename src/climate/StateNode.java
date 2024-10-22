@@ -1,17 +1,5 @@
 package climate;
 
-/**
- * This class contains the State Node, with a String containing the State's
- * name,
- * a next pointer containing the next State in the list, and down pointer
- * containing
- * the first CountyNode in this county.
- * 
- * This Node makes the first layer in the 3-layered linked structure.
- * 
- * @author Navya Sharma
- */
-
 public class StateNode {
     public String name; // state's name
     public StateNode next; // link to the next State in the list

@@ -9,8 +9,6 @@ package climate;
  * the first community in this county.
  * 
  * This Node makes the second layer in the 3-layered linked structure.
- * 
- * @author Navya Sharma
  */
 
 public class CountyNode {
