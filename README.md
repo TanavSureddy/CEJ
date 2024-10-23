@@ -47,4 +47,14 @@ Would you like the list to be printed? [Y/N]: Y
 ...
 ```
 
-# Feel free to edit provided CSV files or import your own. 
+<br/>
+
+- - - -
+
+## Feel free to edit provided CSV files or import your own :)
+<br/>
+<br/>
+<sup><sub>Made in Spring of 2024. Property of Tanav Sureddy.</sub></sup>
+
+
+
